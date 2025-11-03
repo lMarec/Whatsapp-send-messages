@@ -6,6 +6,7 @@ from your WhatsApp account.
 -Python 3.x\
 -`pywhatkit` library\
 -`pyautogui` library\
+-`pip`
 -WhatsApp Web Authentication
 ## Installation
 1. Clone the repository:
