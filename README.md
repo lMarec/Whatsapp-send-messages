@@ -1,6 +1,5 @@
 # WhatsApp Message Sender Script
-
-![Python](https://img.shields.io/badge/language-python-blue)
+![Top Language](https://img.shields.io/github/languages/top/lMarec/Whatsapp-send-messages)
 ![License](https://img.shields.io/github/license/lMarec/Whatsapp-send-messages)
 ![Last Commit](https://img.shields.io/github/last-commit/lMarec/Whatsapp-send-messages)
 
