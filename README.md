@@ -59,23 +59,6 @@ It uses the [`pywhatkit`](https://github.com/Ankit404butfound/PyWhatKit) and [`p
 > **Tip:**  
 > It’s best to log into WhatsApp Web before running the script. If not, you will be prompted to log in.
 
-### Example Session
-
-```bash
-python whatsapp_message.py
-```
-_Menu appears..._
-
-```
-1. Send WhatsApp Message
-2. Exit
--->
-```
-_Choose 1, enter target phone number and message text, follow on-screen instructions!_
-
-_![screenshot of example run](screenshot.png)_  
-*(Consider adding a real screenshot here!)*
-
 ## Troubleshooting
 
 - **QR code not scanning:**  
