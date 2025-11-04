@@ -1,15 +1,15 @@
 # "import a as b" means that b is declared as an abbreviation of module a
 
 from time import sleep # The sleep submodule is used to pause the script, using sleep(seconds)
-from os import system,name # Used in the clearTerminalScreen() procedure
-import pywhatkit as pwk
-import pyautogui as pag
+import os # The os module is used to interact with the operating system, here it is used to delete files
+import pywhatkit as pwk # The pywhatkit module is used to send whatsapp messages
+import pyautogui as pag # The pyautogui module is used to control the mouse and keyboard, here it is used to move the mouse cursor
 
 def clearTerminalScreen(): # Inspired by GeeksForGeeks clear terminal screen script
-    if name == "nt":
-        _ = system('cls') # For Windows
+    if os.name == "nt":
+        _ = os.system('cls') # For Windows
     else:
-        _ = system('clear') # For Unix based distros
+        _ = os.system('clear') # For Unix based distros
 
 while True: # This line onwards will always run unless the value of variable menu == 2
 
@@ -31,9 +31,18 @@ while True: # This line onwards will always run unless the value of variable men
         pwk.sendwhatmsg_instantly(target_phone_number,message_to_send,wait_time=5,tab_close=False)
         
         pag.moveTo(0,0)
+        
+        logfile_keep = input("Message sent!\nWould you like to keep the logfile created by pywhatkit? (y/n)\n--> ")
+        while logfile_keep.lower() != "y" and logfile_keep.lower() != "n":
+            clearTerminalScreen()
+            logfile_keep = input("Invalid input\nTry again\nWould you like to keep the logfile created by pywhatkit? (y/n)\n--> ")
+        if logfile_keep.lower() == "n":
+            clearTerminalScreen()
+            os.remove("pywhatkit_log.txt")
+            print("Logfile deleted")
 
     else:
         False
-        clear_terminal_screen()
+        clearTerminalScreen()
         break
 
