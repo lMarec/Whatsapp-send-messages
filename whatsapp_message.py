@@ -38,7 +38,7 @@ while True: # This line onwards will always run unless the value of variable men
             logfile_keep = input("Invalid input\nTry again\nWould you like to keep the logfile created by pywhatkit? (y/n)\n--> ")
         if logfile_keep.lower() == "n":
             clearTerminalScreen()
-            os.remove("pywhatkit_log.txt")
+            os.remove("PyWhatKit_DB.txt")
             print("Logfile deleted")
 
     else:
