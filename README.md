@@ -19,8 +19,9 @@ It uses the [`pywhatkit`](https://github.com/Ankit404butfound/PyWhatKit) and [`p
 
 - Python 3.x ([Download here](https://www.python.org/downloads/))
 - pip (Python package manager; see instructions below if not installed)
-- [pywhatkit](https://pypi.org/project/pywhatkit/)
-- [pyautogui](https://pypi.org/project/PyAutoGUI/)
+-    [pywhatkit](https://pypi.org/project/pywhatkit/)
+-    [pyautogui](https://pypi.org/project/PyAutoGUI/)
+-    The modules above will automatically be installed if not already
 - WhatsApp Web account (be ready to scan the QR code if you aren't logged in)
 
 ## Installing pip (if not already installed)
