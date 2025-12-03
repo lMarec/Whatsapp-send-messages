@@ -1,10 +1,19 @@
 # "import a as b" means that b is declared as an abbreviation of module a
-
+import subprocess
 from time import sleep # The sleep submodule is used to pause the script, using sleep(seconds)
 import os # The os module is used to interact with the operating system, here it is used to delete files
 import pywhatkit as pwk # The pywhatkit module is used to send whatsapp messages
 import pyautogui as pag # The pyautogui module is used to control the mouse and keyboard, here it is used to move the mouse cursor
 
+# the next 5 lines of code will check using your terminal to see if the pip modules are installed, and will install automatically if that isn't the case
+
+is_pip_installed = ['(pip list | grep -E "pywhatkit|pyautogui") || (pip list | findstr -i "pywhatkit pyautogui")']
+install_pip_modules = ["pip install pywhatkit pyautogui"]
+
+is_installed = subprocess.run(is_pip_installed, capture_output=True, text=True)
+if is_installed.stdout.strip() == "":
+    subprocess.run(install_pip_modules)
+    
 def clearTerminalScreen(): # Inspired by GeeksForGeeks clear terminal screen script
     if os.name == "nt":
         _ = os.system('cls') # For Windows
